@@ -1,0 +1,38 @@
+@mixin background {
+    background: rgb(2,0,36);
+    background: 
+        linear-gradient(
+            90deg, 
+            rgba(2,0,36,1) 0%, 
+            rgba(9,121,48,1) 37%, 
+            rgba(0,212,255,1) 100%
+        );
+    color: white;
+}
+
+.card {
+    background-color: #c4c4c4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    width: 650px;
+}
+
+.card-header {
+
+    font-size: 16px;
+    border-bottom: 1px solid #888;
+    padding: 20px;
+}
+
+.author {
+    @include background;
+    font-size: 14px;
+    border-bottom: 1px solid #888;
+    padding: 20px;
+}
+
+.date-published {
+    @include background;
+    font-size: 14px;
+    padding: 20px;
+}

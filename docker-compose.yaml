@@ -1,0 +1,14 @@
+version: "1.0"
+services:
+  backend:
+    build: ./sampleproject
+    container_name: spring-boot-backend
+    ports:
+     - '8080:8080'
+    stdin_open: true
+    tty: true
+  frontend:
+    build: ./sampleprojectfrontend
+    container_name: react-frontend
+    ports:
+      - '5173:5173'
