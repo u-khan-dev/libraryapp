@@ -2,23 +2,17 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package.json package-lock.json /app/
+COPY package.json package-lock.json ./
 
 RUN npm install
 
-COPY /src /app/src
-
-COPY /index.html /app
-
-COPY /.eslintrc.cjs /app
-
-COPY /README.md /app
-
-COPY /tsconfig.json /app
-
-COPY /tsconfig.node.json /app
-
-COPY /vite.config.ts /app
+COPY src ./src
+COPY index.html ./
+COPY .eslintrc.cjs ./
+COPY README.md ./
+COPY tsconfig.json ./
+COPY tsconfig.node.json ./
+COPY vite.config.ts ./
 
 RUN npm run build
 
