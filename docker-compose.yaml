@@ -4,8 +4,6 @@ services:
     container_name: spring-boot-backend
     ports:
      - '8080:8080'
-    stdin_open: true
-    tty: true
   frontend:
     build: ./sampleprojectfrontend
     container_name: react-frontend
