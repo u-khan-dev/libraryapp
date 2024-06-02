@@ -20,10 +20,6 @@ public class LibraryController {
     }
 
     // make a request find all books
-    @CrossOrigin(
-            origins="http://localhost:5173",
-            allowedHeaders = "*"
-    )
     @GetMapping("")
     public List<Book> findAllBooks() {
         return libraryRepo.findAll();
