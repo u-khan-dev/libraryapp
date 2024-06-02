@@ -16,6 +16,6 @@ COPY vite.config.ts ./
 
 RUN npm run build
 
-EXPOSE 5173
+EXPOSE 8080
 
 CMD ["npm", "run", "start"]
