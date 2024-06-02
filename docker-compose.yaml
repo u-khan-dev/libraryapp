@@ -1,13 +1,13 @@
 services:
   backend:
-    build: ./sampleproject
+    image: springboot-backend
     container_name: spring-boot-backend
     ports:
      - '8080:8080'
     stdin_open: true
     tty: true
   frontend:
-    build: ./sampleprojectfrontend
+    image: springboot-frontend
     container_name: react-frontend
     ports:
       - '5173:5173'
