@@ -22,8 +22,6 @@ COPY /vite.config.ts /app
 
 RUN npm run build
 
-RUN npm start
-
-EXPOSE 5173
+EXPOSE 80
 
 CMD ["npm", "start"]
