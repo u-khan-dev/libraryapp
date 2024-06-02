@@ -6,11 +6,11 @@ COPY package.json package-lock.json /app/
 
 RUN npm install
 
-COPY /src /app
+COPY /src /app/src
 
 COPY /index.html /app
 
-COPY /.eslint.cjs /app
+COPY /.eslintrc.cjs /app
 
 COPY /README.md /app
 
@@ -22,6 +22,6 @@ COPY /vite.config.ts /app
 
 RUN npm run build
 
-EXPOSE 80
+EXPOSE 5173
 
 CMD ["npm", "start"]
